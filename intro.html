@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Background Image Swap</title>
+    <style>
+        body {
+            background-image: url('image1.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const imageSources = [
+            'two-puppies-some-stone-steps_1268-24728.jpg','picture-amanita-muscaria-mushrooms-neon-style_1268-28579.jpg','closeup-shot-beautiful-butterfly-with-interesting-textures-orange-petaled-flower_181624-7640.avif','clock-ticks-sands-slip-sun-sets-success-awaits-generative-ai_188544-9602.avif','cute-domestic-kitten-sitting-leaf-generative-ai_188544-8316.jpg','fluffy-yellow-puppy-playing-with-blue-ball-generative-ai_188544-60034.jpg','beautiful-cherry-blossom_181624-668.jpg'
+        ];
+
+        function changeBackgroundImage() {
+            const randomIndex = Math.floor(Math.random() * imageSources.length);
+            document.body.style.backgroundImage = `url(${imageSources[randomIndex]})`;
+        }
+
+        // Change the background image every 5 seconds (5000 milliseconds)
+        setInterval(changeBackgroundImage, 1000);
+    </script>
+</body>
+</html>
+
